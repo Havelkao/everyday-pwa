@@ -1,0 +1,44 @@
+:root {
+  --font-primary: #999;
+  --font-secondary: #555;
+  --color-primary: #262b3e;
+  --color-secondary: white;
+  --bg: linear-gradient(var(--color-primary) 50%, var(--color-secondary) 50%);
+}
+body {
+  color: var(--font-secondary);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
+}
+
+section {
+  display: flex;
+  background: var(--color-secondary);
+  border-radius: 2rem 2rem 0 0;
+  width: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  min-height: auto;
+  flex: 1;
+}
+
+section::-webkit-scrollbar {
+  display: none;
+}

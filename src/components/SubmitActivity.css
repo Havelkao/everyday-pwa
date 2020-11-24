@@ -1,0 +1,20 @@
+form {
+  display: flex;
+  height: 2em;
+  border-bottom: 2px solid black;
+  background: var(--bg);
+}
+
+input {
+  flex-grow: 1;
+  border: none;
+
+  background: var(--bg);
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+}

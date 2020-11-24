@@ -1,0 +1,25 @@
+.panel-top {
+  background: transparent;
+  color: white;
+  margin: 2rem;
+}
+
+.title {
+  font-size: 1.7rem;
+}
+
+.subtitle {
+  color: var(--color-secondary);
+  opacity: 0.6;
+}
+
+.panel-button {
+  padding: 0.7rem 1rem;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 0.5em;
+}
+
+.panel-head {
+  font-weight: bold;
+}

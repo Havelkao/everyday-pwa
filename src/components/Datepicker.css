@@ -1,0 +1,48 @@
+.datepicker-container {
+  background: transparent;
+  color: white;
+  margin-top: 1.5em;
+}
+
+.datepicker-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.datepicker-icons {
+  opacity: 0.8;
+}
+
+.datepicker-list {
+  display: flex;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.datepicker-list::-webkit-scrollbar {
+  display: none;
+}
+
+.datepicker-item {
+  display: grid;
+  gap: 0.5rem;
+  text-align: center;
+  min-width: 35px;
+  margin: 0 0.25rem;
+}
+
+.datepicker-card {
+  padding: 0.7rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.datepicker-card.active {
+  background: white;
+  color: black;
+  opacity: 0.8;
+}
