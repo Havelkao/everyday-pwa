@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="view">
       <PanelTop title="Tasks" subtitle="tasks" />
-      <section>
+      <section className="home">
         {dates.map((day) => (
           <CalendarTaskList day={day} key={day} />
         ))}
@@ -23,9 +23,9 @@ function generateDates() {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   let start = today.getTime();
-  let end = today.getTime() + 6 * msDay;
+  let end = today.getTime() + 3 * msDay;
 
-  while (start <= end) {
+  while (start < end) {
     data.push(new Date(start));
     start = start + msDay;
   }

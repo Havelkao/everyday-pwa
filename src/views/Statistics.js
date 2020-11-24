@@ -3,7 +3,7 @@ import PanelTop from "../components/PanelTop";
 
 export default function Statistics() {
   return (
-    <div>
+    <div className="view">
       <PanelTop title="Statistics" />
       <section></section>
     </div>

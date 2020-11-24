@@ -16,8 +16,7 @@ export default function Datepicker() {
   useEffect(() => {
     const scrollable = document.querySelector(".datepicker-list");
 
-    var outerContentWidth = scrollable.clientWidth;
-    var scrollPosition = outerContentWidth / 2;
+    var scrollPosition = scrollable.scrollWidth;
     scrollable.scrollTo(scrollPosition, 0);
   }, []);
 
@@ -64,7 +63,7 @@ function generateDates() {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   let start = today.getTime() - 15 * msDay;
-  let end = today.getTime() + 15 * msDay;
+  let end = today.getTime();
 
   while (start <= end) {
     data.push(new Date(start));

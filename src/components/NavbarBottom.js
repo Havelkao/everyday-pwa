@@ -8,7 +8,7 @@ export default function NavbarBottom() {
       <ul>
         <li>
           <NavLink exact activeClassName="active-link" to="/">
-            <i className="fas fa-tasks"></i>
+            <i className="fas fa-list"></i>
           </NavLink>
         </li>
         <li>
@@ -26,7 +26,7 @@ export default function NavbarBottom() {
         </li>
         <li>
           <NavLink exact activeClassName="active-link" to="/stats">
-            <i className="fas fa-chart-bar"></i>
+            <i className="fas fa-cog"></i>
           </NavLink>
         </li>
       </ul>

@@ -1,5 +1,6 @@
 import React from "react";
 import Datepicker from "../components/Datepicker";
+import HistoryCard from "../components/HistoryCard";
 import PanelTop from "../components/PanelTop";
 
 export default function History() {
@@ -8,7 +9,13 @@ export default function History() {
       <PanelTop title="History">
         <Datepicker />
       </PanelTop>
-      <section></section>
+      <section>
+        <div className="history-card-list">
+          <HistoryCard />
+          <HistoryCard />
+          <HistoryCard />
+        </div>
+      </section>
     </div>
   );
 }
