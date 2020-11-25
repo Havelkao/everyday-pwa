@@ -6,7 +6,6 @@ export default function Datepicker() {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const [selected, setSelected] = useState(today);
-
   const dates = generateDates();
 
   const handleSelect = (newSelected) => {
@@ -15,21 +14,20 @@ export default function Datepicker() {
 
   useEffect(() => {
     const scrollable = document.querySelector(".datepicker-list");
-
-    var scrollPosition = scrollable.scrollWidth;
+    let scrollPosition = scrollable.scrollWidth;
     scrollable.scrollTo(scrollPosition, 0);
   }, []);
 
   return (
     <div className="datepicker-container">
-      <div className="datepicker-head">
-        <div className="datepicker-title">
+      <div className="datepicker-header">
+        <div>
           {selected.toLocaleDateString("en-GB", { weekday: "long" })}
           &nbsp;
           {selected.getDate()}, &nbsp;
           {selected.toLocaleDateString("en-GB", { month: "short" })}
         </div>
-        <div className="datepicker-icons">
+        <div>
           <i className="fas fa-chevron-left"></i>
           &nbsp;
           <i className="fas fa-chevron-right"></i>

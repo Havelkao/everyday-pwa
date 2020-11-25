@@ -1,7 +1,7 @@
 .calendar-list {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2em 2em calc(65px + 2rem) 2em;
   min-width: calc(100% - 4rem);
 }
 
@@ -30,16 +30,11 @@
   align-items: center;
   gap: 0.5em;
   grid-template-columns: 40px auto 1fr;
-  width: 100%;
   min-height: 70px;
 }
 
-.task-item:first-child {
-  margin-top: 0;
-}
-
 .task-description {
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .task-target {
@@ -47,7 +42,6 @@
   text-align: center;
   justify-self: flex-start;
   opacity: 0.3;
-  font-size: 1rem;
 }
 
 /* OMFG checkbox styling */

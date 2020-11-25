@@ -1,5 +1,4 @@
 import React from "react";
-import "./CalendarTaskList.css";
 
 export default function CalendarTaskList({ day }) {
   const tasks = [1, 2, 3, 4, 5];

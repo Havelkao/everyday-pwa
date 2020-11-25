@@ -1,43 +1,46 @@
 :root {
-  --font-primary: #999;
-  --font-secondary: #555;
   --color-primary: #262b3e;
   --color-secondary: white;
+  --color-tertiary: #999;
 }
+
 body {
-  color: var(--font-secondary);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   background-color: var(--color-primary);
 }
 
-main {
+#root {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
   margin: 0 auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   min-height: 100vh;
+  max-width: 800px;
 }
 
-.view {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 65px;
-}
-
-section {
-  display: flex;
-  background: var(--color-secondary);
-  overflow: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  min-height: auto;
+main {
   flex: 1;
-
+  background: var(--color-secondary);
+  padding: 2em 2em calc(65px + 2rem) 2em;
   border-radius: 2em 2em 0 0;
 }
 
-section::-webkit-scrollbar {
+main.home {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  border-radius: 2em 0 0 0;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+main.home::-webkit-scrollbar {
   display: none;
+}
+
+main.settings {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 2em 0 calc(65px + 2rem) 0;
 }

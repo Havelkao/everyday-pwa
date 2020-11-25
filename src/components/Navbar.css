@@ -8,7 +8,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   height: 65px;
-  background: white;
+  background: var(--color-secondary);
 }
 
 nav ul {
@@ -29,7 +29,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--font-primary);
+  color: var(--color-tertiary);
   text-decoration: none;
   height: 100%;
 }
@@ -43,4 +43,23 @@ nav .fa-plus {
 
 .active-link {
   color: var(--color-primary);
+}
+
+/* Settings */
+
+nav.settings {
+  background: var(--color-primary);
+}
+
+nav.settings .fa-plus {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+nav.settings .active-link {
+  color: var(--color-secondary);
+}
+
+nav {
+  transition: all ease-in-out 0.3s;
 }

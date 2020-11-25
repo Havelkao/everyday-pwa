@@ -1,19 +1,20 @@
 import React from "react";
-import PanelTop from "../components/PanelTop";
-import CalendarTaskList from "../components/CalendarTaskList";
+import Header from "../components/Header";
+import DailyTasks from "../components/DailyTasks";
+import "./Home.css";
 
 export default function Home() {
   const dates = generateDates();
 
   return (
-    <div className="view">
-      <PanelTop title="Tasks" subtitle="tasks" />
-      <section className="home">
+    <React.Fragment>
+      <Header title="Tasks" />
+      <main className="home">
         {dates.map((day) => (
-          <CalendarTaskList day={day} key={day} />
+          <DailyTasks day={day} key={day} />
         ))}
-      </section>
-    </div>
+      </main>
+    </React.Fragment>
   );
 }
 

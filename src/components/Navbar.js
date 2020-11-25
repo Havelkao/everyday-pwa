@@ -1,10 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import "./NavbarBottom.css";
+import { NavLink, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
 export default function NavbarBottom() {
+  const location = useLocation();
+
   return (
-    <nav>
+    <nav className={location.pathname === "/settings" ? "settings" : ""}>
       <ul>
         <li>
           <NavLink exact activeClassName="active-link" to="/">
@@ -25,7 +27,7 @@ export default function NavbarBottom() {
           </NavLink>
         </li>
         <li>
-          <NavLink exact activeClassName="active-link" to="/stats">
+          <NavLink exact activeClassName="active-link" to="/settings">
             <i className="fas fa-cog"></i>
           </NavLink>
         </li>

@@ -1,19 +1,18 @@
 import React from "react";
 import ChallengeCard from "../components/ChallengeCard";
-import PanelTop from "../components/PanelTop";
+import Header from "../components/Header";
+import "./Challenges.css";
 
 export default function Challenges() {
   return (
-    <div className="view">
-      <PanelTop title="Challenges" />
-      <section>
-        <div className="challenge-list">
-          <ChallengeCard />
-          <ChallengeCard />
-          <ChallengeCard />
-          <ChallengeCard />
-        </div>
-      </section>
-    </div>
+    <React.Fragment>
+      <Header title="Challenges" />
+      <main>
+        <ChallengeCard />
+        <ChallengeCard />
+        <ChallengeCard />
+        <ChallengeCard />
+      </main>
+    </React.Fragment>
   );
 }

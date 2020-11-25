@@ -1,5 +1,4 @@
 import React from "react";
-import "./ChallengeCard.css";
 
 export default function ChallengeCard() {
   return (

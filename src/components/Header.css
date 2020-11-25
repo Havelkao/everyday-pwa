@@ -1,0 +1,10 @@
+header {
+  background: transparent;
+  color: white;
+  margin: 2rem;
+}
+
+header h1 {
+  font-size: 1.7rem;
+  margin: 0;
+}
