@@ -1,10 +1,11 @@
 import React from "react";
 import Header from "../components/Header";
+import PageTransition from "../components/PageTransition";
 import "./Settings.css";
 
 export default function Settings() {
   return (
-    <React.Fragment>
+    <PageTransition>
       <Header title="Settings"></Header>
       <div className="settings-header">
         <i className="fas fa-hand-peace"> </i>
@@ -29,6 +30,6 @@ export default function Settings() {
         </div>
         <div className="settings-item">Logout</div>
       </main>
-    </React.Fragment>
+    </PageTransition>
   );
 }

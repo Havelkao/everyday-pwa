@@ -3,10 +3,11 @@ import Datepicker from "../components/Datepicker";
 import HistoryCard from "../components/HistoryCard";
 import Header from "../components/Header";
 import "./History.css";
+import PageTransition from "../components/PageTransition";
 
 export default function History() {
   return (
-    <React.Fragment>
+    <PageTransition>
       <Header title="History">
         <Datepicker />
       </Header>
@@ -17,6 +18,6 @@ export default function History() {
           <HistoryCard />
         </div>
       </main>
-    </React.Fragment>
+    </PageTransition>
   );
 }

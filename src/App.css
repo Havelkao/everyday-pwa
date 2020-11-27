@@ -6,9 +6,10 @@
 
 body {
   background-color: var(--color-primary);
+  margin: 0;
 }
 
-#root {
+.page {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -25,7 +26,7 @@ main {
   border-radius: 2em 2em 0 0;
 }
 
-main.home {
+main.tasks {
   display: flex;
   width: 100%;
   padding: 0;
@@ -35,7 +36,7 @@ main.home {
   scrollbar-width: none; /* Firefox */
 }
 
-main.home::-webkit-scrollbar {
+main.tasks::-webkit-scrollbar {
   display: none;
 }
 
@@ -43,4 +44,24 @@ main.settings {
   background: var(--color-primary);
   color: var(--color-secondary);
   padding: 2em 0 calc(65px + 2rem) 0;
+}
+
+/* Page transition */
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 5000ms;
 }

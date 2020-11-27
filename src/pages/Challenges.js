@@ -2,10 +2,11 @@ import React from "react";
 import ChallengeCard from "../components/ChallengeCard";
 import Header from "../components/Header";
 import "./Challenges.css";
+import PageTransition from "../components/PageTransition";
 
 export default function Challenges() {
   return (
-    <React.Fragment>
+    <PageTransition>
       <Header title="Challenges" />
       <main>
         <ChallengeCard />
@@ -13,6 +14,6 @@ export default function Challenges() {
         <ChallengeCard />
         <ChallengeCard />
       </main>
-    </React.Fragment>
+    </PageTransition>
   );
 }
