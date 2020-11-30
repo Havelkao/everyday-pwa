@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.2.2",
     "cal-heatmap": "^3.6.2",
     "font-awesome": "^4.7.0",
+    "framer": "^1.2.10",
     "framer-motion": "^2.9.4",
     "gsap": "^3.5.1",
     "react": "^17.0.1",

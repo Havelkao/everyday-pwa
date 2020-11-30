@@ -3,17 +3,49 @@ import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Home from "./pages/Home";
-import History from "./pages/History";
 import Navbar from "./components/Navbar";
 import Challenges from "./pages/Challenges";
 import Settings from "./pages/Settings";
+import History from "./pages/History";
+
 const data = [
   {
     id: 1,
-    name: "20 push-ups",
+    name: "Daily push-ups",
+    icon: "fas fa-dumbbell",
     start: "2020-11-26",
     end: "2020-12-31",
+    value: 20,
+    unit: "push-up",
+    period: [0, 1, 2, 3, 4, 5, 6],
   },
+  {
+    id: 2,
+    name: "Yoga Wednesday",
+    icon: "fas fa-peace",
+    start: "2020-11-26",
+    end: "2020-12-31",
+    value: 30,
+    unit: "minute",
+    period: [2],
+  },
+  {
+    id: 3,
+    name: "5K run",
+    icon: "fas fa-running",
+    start: "2020-11-26",
+    end: "2020-12-31",
+    value: 5,
+    unit: "Km",
+    period: [1, 5],
+  },
+];
+
+const routes = [
+  { path: "/history", Component: History },
+  { path: "/settings", Component: Settings },
+  { path: "/challenges", Component: Challenges },
+  { path: "/", Component: Home },
 ];
 
 export default function App() {
@@ -23,10 +55,11 @@ export default function App() {
     <React.Fragment>
       <AnimatePresence exitBeforeEnter initial={false}>
         <Switch location={location} key={location.pathname}>
-          <Route path="/history" component={History} />
-          <Route path="/settings" component={Settings} />
-          <Route path="/challenges" component={Challenges} />
-          <Route path="/" component={Home} />
+          {routes.map(({ path, Component }) => (
+            <Route key={path} path={path}>
+              <Component data={data} />
+            </Route>
+          ))}
         </Switch>
       </AnimatePresence>
       <motion.div
@@ -35,7 +68,7 @@ export default function App() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3, transition: "linear" }}
       >
-        <Navbar />
+        <Navbar data={data} />
       </motion.div>
     </React.Fragment>
   );

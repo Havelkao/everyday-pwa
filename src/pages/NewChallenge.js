@@ -1,15 +1,13 @@
 import React from "react";
-import "./AddNew.css";
+import "./NewChallenge.css";
 
-export default function AddNew() {
-  const days = ["Everyday", "Monday", "Tu", "We", "Th", "Fr", "Sa", "Su"];
-
+export default function NewChallenge() {
   let endDate = new Date();
   endDate.setDate(endDate.getDate() + 1);
 
   return (
     <div className="addnew-body">
-      <h1>New</h1>
+      {/* <h1>New</h1>
       <form>
         <label htmlFor="name"></label>
         <div className="text-input" contentEditable>
@@ -27,20 +25,10 @@ export default function AddNew() {
         </div>
         <br />
         Start
-        <input
-          type="date"
-          name=""
-          id=""
-          defaultValue={new Date().toISOString().substr(0, 10)}
-        />
+        <input type="date" name="" id="" defaultValue={new Date().toISOString().substr(0, 10)} />
         End
-        <input
-          type="date"
-          name=""
-          id=""
-          defaultValue={endDate.toISOString().substr(0, 10)}
-        />
-      </form>
+        <input type="date" name="" id="" defaultValue={endDate.toISOString().substr(0, 10)} />
+      </form> */}
     </div>
   );
 }

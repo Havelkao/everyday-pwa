@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Datepicker from "../components/Datepicker";
 import Header from "../components/Header";
 import PageTransition from "../components/PageTransition";
+import Accordion from "../components/Accordion";
+import "./Home.css";
 
-export default function Home() {
+export default function Home({ data }) {
+  const [expanded, setExpanded] = useState(0);
+
   return (
     <PageTransition>
-      <Header title="Hi, Username">
-        <Datepicker />
-      </Header>
-      <main>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel illo
-        debitis animi soluta. Voluptate consectetur quibusdam esse laborum quos
-        enim sed quis assumenda provident saepe commodi, dolorum voluptatem
-        dignissimos error.
+      <Header title="Hi, #Username" body={<Datepicker />}></Header>
+      <main className="home">
+        {data.map((d) => (
+          <Accordion key={d.id} item={d} expanded={expanded} setExpanded={setExpanded} />
+        ))}
       </main>
     </PageTransition>
   );

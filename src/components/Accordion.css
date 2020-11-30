@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  background: #f6f5f5;
+  padding: 1em;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+.container-card {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr 1fr;
+  align-items: flex-start;
+}
+
+.container-card-value {
+  text-align: end;
+}
+
+.container-card i {
+  font-size: 1.4em;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-expansion {
+  overflow: hidden;
+}

@@ -1,0 +1,39 @@
+.challenge-type-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2em;
+  background: rgba(225, 222, 221);
+  border-radius: 0.5em;
+  height: 2em;
+  font-size: 0.9em;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.item div:not(.outline) {
+  z-index: 10;
+
+  transition: all 300ms;
+}
+
+.item div.active {
+  color: white;
+}
+
+.outline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  z-index: 3;
+}

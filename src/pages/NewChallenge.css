@@ -1,15 +1,4 @@
 .addnew-body {
-  position: absolute;
-  max-width: calc(800px - 4em);
-  width: calc(100vw - 4em);
-  height: 0;
-  bottom: 65px;
-  background-color: var(--color-secondary);
-  transition: all linear 0.3s;
-  padding: 2em;
-  z-index: -10;
-  visibility: hidden;
-  overflow: hidden;
 }
 
 .addnew-body h1 {

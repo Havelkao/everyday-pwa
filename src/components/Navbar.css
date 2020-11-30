@@ -24,11 +24,15 @@ nav {
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-
   font-size: 1.2rem;
-  text-align: center;
   z-index: 1;
+}
+
+nav a,
+nav .nav-submit-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav a {
@@ -43,6 +47,7 @@ nav .fa-plus {
   color: white;
   border-radius: 50%;
   background: var(--color-primary);
+  text-align: center;
 }
 
 .active-link {
