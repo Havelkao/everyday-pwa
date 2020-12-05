@@ -40,7 +40,7 @@ export default function Navbar({ data }) {
   return (
     <React.Fragment>
       <div className="overlay"></div>
-      <nav className={`${isSettings ? "settings" : ""}`}>
+      <div className={`nav ${isSettings ? "settings" : ""}`}>
         <NavLink exact activeClassName="active-link" to="/">
           <i className="fas fa-list"></i>
         </NavLink>
@@ -56,7 +56,7 @@ export default function Navbar({ data }) {
         <NavLink exact activeClassName="active-link" to="/settings">
           <i className="fas fa-cog"></i>
         </NavLink>
-      </nav>
+      </div>
     </React.Fragment>
   );
 }

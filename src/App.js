@@ -52,7 +52,7 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <React.Fragment>
+    <>
       <AnimatePresence exitBeforeEnter initial={false}>
         <Switch location={location} key={location.pathname}>
           {routes.map(({ path, Component }) => (
@@ -70,6 +70,6 @@ export default function App() {
       >
         <Navbar data={data} />
       </motion.div>
-    </React.Fragment>
+    </>
   );
 }

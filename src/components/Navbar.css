@@ -11,7 +11,7 @@
   display: none;
 }
 
-nav {
+.nav {
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -28,43 +28,39 @@ nav {
   z-index: 1;
 }
 
-nav a,
-nav .nav-submit-toggle {
+.nav a,
+.nav .nav-submit-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-nav a {
+.nav a {
   color: var(--color-tertiary);
   text-decoration: none;
 }
 
-nav .fa-plus {
+.fa-plus {
   padding: 14px;
-  width: 20px;
-  height: 20px;
   color: white;
   border-radius: 50%;
-  background: var(--color-primary);
-  text-align: center;
 }
 
-.active-link {
+a.active-link {
   color: var(--color-primary);
 }
 
 /* Settings */
 
-nav.settings {
+.nav.settings {
   background: var(--color-primary);
 }
 
-nav.settings .fa-plus {
+.nav.settings .fa-plus {
   background: var(--color-secondary);
   color: var(--color-primary);
 }
 
-nav.settings .active-link {
+.nav.settings .active-link {
   color: var(--color-secondary);
 }

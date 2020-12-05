@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Datepicker from "../components/Datepicker";
 import Header from "../components/Header";
-import PageTransition from "../components/PageTransition";
+import PageTransition from "../utils/PageTransition";
 import Accordion from "../components/Accordion";
 import "./Home.css";
 

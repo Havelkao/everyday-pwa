@@ -6,8 +6,8 @@ export default function Accordion({ item, expanded, setExpanded }) {
   const isOpen = item.id === expanded;
 
   return (
-    <div className="container" onClick={() => setExpanded(isOpen ? false : item.id)}>
-      <div className="container-card">
+    <div className="container-accordion">
+      <div className="container-card" onClick={() => setExpanded(isOpen ? false : item.id)}>
         <div key={item.id}>
           <i className={item.icon}></i>
         </div>
@@ -23,9 +23,10 @@ export default function Accordion({ item, expanded, setExpanded }) {
             initial={{ height: 0, marginTop: "0em" }}
             animate={{ height: "auto", marginTop: "1em" }}
             exit={{ height: 0, marginTop: "0em" }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.7 }}
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, rerum.
+            <div className="input-value" data-placeholder="What have you done?!" contentEditable></div>
+            <button className="submit-value">Add</button>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,4 +1,4 @@
-.container {
+.container-accordion {
   display: grid;
   background: #f6f5f5;
   padding: 1em;
@@ -31,5 +31,33 @@
 }
 
 .container-expansion {
+  display: grid;
+  grid-template-columns: 1fr auto;
   overflow: hidden;
+  height: 3em;
+}
+
+.input-value {
+  background-color: white;
+  border-radius: 0.5em 0 0 0.5em;
+  padding: 0.3em;
+}
+
+.input-value:focus {
+  outline: none;
+}
+
+.input-value:empty:before {
+  content: attr(data-placeholder);
+  color: #bbbbbb;
+}
+
+.container-expansion button {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 0 0.5em 0.5em 0;
+
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
 }

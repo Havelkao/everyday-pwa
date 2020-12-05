@@ -2,7 +2,7 @@ import React from "react";
 import Datepicker from "../components/Datepicker";
 import Header from "../components/Header";
 import "./History.css";
-import PageTransition from "../components/PageTransition";
+import PageTransition from "../utils/PageTransition";
 
 export default function History() {
   return (

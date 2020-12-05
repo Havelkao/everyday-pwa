@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../components/Header";
-import PageTransition from "../components/PageTransition";
+import PageTransition from "../utils/PageTransition";
 import "./Settings.css";
+import { DispatchContext } from "../Login";
 
 export default function Settings() {
+  const dispatch = useContext(DispatchContext);
+  console.log(dispatch);
   return (
     <PageTransition>
       <Header title="Settings"></Header>
@@ -28,7 +31,9 @@ export default function Settings() {
           About
           <i className="fas fa-chevron-down"></i>
         </div>
-        <div className="settings-item">Logout</div>
+        <div className="settings-item" onClick={() => dispatch({ type: "logout" })}>
+          Logout
+        </div>
       </main>
     </PageTransition>
   );
