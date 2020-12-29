@@ -1,13 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import "./ToggleSwitch.css";
 
 const options = ["Active", "Completed"];
 
-export default function ToggleSwitch() {
-  const [selected, setSelected] = useState(options[0]);
-
+export default function ToggleSwitch({ active, setActive }) {
   return (
     <AnimateSharedLayout>
       <div className="challenge-type-toggle">
@@ -15,8 +12,8 @@ export default function ToggleSwitch() {
           <ToggleSwitchItem
             key={option}
             name={option}
-            isSelected={selected === option}
-            onClick={() => setSelected(option)}
+            isSelected={active === option}
+            onClick={() => setActive(option)}
           />
         ))}
       </div>

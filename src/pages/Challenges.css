@@ -1,24 +1,3 @@
-/* .challenge-type-toggle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 2em;
-  background: rgba(225, 222, 221);
-  border-radius: 0.5em;
-  height: 2em;
-  font-size: 0.9em;
-}
-.challenge-type-toggle div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.challenge-type-toggle-active {
-  background-color: var(--color-primary);
-  border-radius: 0.5em;
-  color: var(--color-secondary);
-} */
-
 .challenge-card-grid {
   display: grid;
   grid-gap: 1em;
@@ -28,6 +7,7 @@
 .challenge-card {
   padding: 1em;
   border-radius: 1em;
+  /* box-shadow: 0 0 10px 3px #ddd; */
   background-color: rgba(225, 222, 221, 0.3);
 }
 

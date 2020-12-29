@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Datepicker from "../components/Datepicker";
 import Header from "../components/Header";
 import "./History.css";
 import PageTransition from "../utils/PageTransition";
 
 export default function History() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const [selectedDate, setSelectedDate] = useState(today);
+
   return (
     <PageTransition>
-      <Header title="History" body={<Datepicker />}></Header>
-      <main>
+      <Header
+        title="History"
+        body={<Datepicker selectedDate={selectedDate} setSelectedDate={setSelectedDate} />}
+      ></Header>
+      <main className="history">
         <div className="history-card-list">
           <HistoryCard />
           <HistoryCard />

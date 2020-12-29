@@ -23,8 +23,8 @@ function loginReducer(state, action) {
 }
 
 const initialState = {
-  username: "",
-  password: "",
+  username: "mango",
+  password: "pasta",
   isLoading: false,
   error: "",
   isLoggedIn: false,
@@ -68,7 +68,9 @@ export default function Login() {
           value={username}
           onChange={(e) => dispatch({ type: "field", field: "username", value: e.currentTarget.value })}
         />
-        <label htmlFor="username">Username</label>
+        <label className={`active`} htmlFor="username">
+          Username
+        </label>
       </div>
 
       <div className="input-field">
@@ -78,7 +80,9 @@ export default function Login() {
           value={password}
           onChange={(e) => dispatch({ type: "field", field: "password", value: e.currentTarget.value })}
         />
-        <label htmlFor="password">Password</label>
+        <label className={`active`} htmlFor="password">
+          Password
+        </label>
       </div>
 
       <button className="btn btn-login" type="submit" disabled={isLoading}>
@@ -86,7 +90,6 @@ export default function Login() {
       </button>
 
       {error && <p className="red-text lighten-3">{error}</p>}
-      <p>mango/pasta</p>
     </form>
   );
 }

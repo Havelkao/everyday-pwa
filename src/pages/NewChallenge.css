@@ -1,66 +1,26 @@
-.addnew-body {
+.new-challenge {
+  display: none;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 0;
+  bottom: 0;
+  max-width: calc(800px);
+  width: 100%;
+  background-color: var(--color-secondary);
+  border-radius: 2em 2em 0 0;
+  padding: 2em;
+
+  z-index: 2;
 }
 
-.addnew-body h1 {
+.new-challenge h1 {
   margin: 0;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.addnew-body form {
-  display: flex;
-  flex-direction: column;
-}
-
-.addnew-periodicity {
+.new-challenge-periodicity {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.addnew-body .text-input {
-  border: none;
-  background: hsl(0 0% 93%);
-  border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
-  border-radius: 1em;
-}
-
-.addnew-body input:focus {
-  outline: none;
-}
-
-/* FML input date styling */
-/* Removes the clear button from date inputs */
-input[type="date"]::-webkit-clear-button {
-  display: none;
-}
-
-/* Removes the spin button */
-input[type="date"]::-webkit-inner-spin-button {
-  display: none;
-}
-
-/* Always display the drop down caret */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  color: #2c3e50;
-}
-
-/* A few custom styles for date inputs */
-input[type="date"] {
-  appearance: none;
-  -webkit-appearance: none;
-  color: #95a5a6;
-  font-family: "Helvetica", arial, sans-serif;
-  font-size: 18px;
-  border: 1px solid #ecf0f1;
-  background: #ecf0f1;
-  padding: 5px;
-  display: inline-block !important;
-  visibility: visible !important;
-}
-
-input[type="date"],
-focus {
-  color: #95a5a6;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }

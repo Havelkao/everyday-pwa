@@ -10,10 +10,7 @@ export default function Settings() {
   return (
     <PageTransition>
       <Header title="Settings"></Header>
-      <div className="settings-header">
-        <i className="fas fa-hand-peace"> </i>
-        <div className="settings-name">Petr Tomek</div>
-      </div>
+      <Picture />
       <main className="settings">
         <div className="settings-item">
           Account
@@ -36,5 +33,14 @@ export default function Settings() {
         </div>
       </main>
     </PageTransition>
+  );
+}
+
+function Picture() {
+  return (
+    <div className="settings-header">
+      <i className="fas fa-hand-peace"> </i>
+      <div className="settings-name">Petr Tomek</div>
+    </div>
   );
 }

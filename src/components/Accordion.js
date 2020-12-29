@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Accordion.css";
 
@@ -7,7 +7,7 @@ export default function Accordion({ item, expanded, setExpanded }) {
 
   return (
     <div className="container-accordion">
-      <div className="container-card" onClick={() => setExpanded(isOpen ? false : item.id)}>
+      <div className="container-accordion-card" onClick={() => setExpanded(isOpen ? false : item.id)}>
         <div key={item.id}>
           <i className={item.icon}></i>
         </div>
